@@ -28,6 +28,7 @@ Startup project of Gawtam C R, a solo founder. This folder holds the hackathon m
 | `Pitch/CRG Hack Idea.pdf` | Original hackathon notes: team meetings, pitch, PoC, open questions, interview guide, leads, competitors. Background only; don't edit |
 | `Research/ICP.md` | ICP research: candidate segments, scorecard, recommendation, validation plan |
 | `Research/Competitors.md` | Competitor analysis: master table, threat ratings, feature-overlap matrix, gaps |
+| `Research/Lead_*.md` | One file per customer lead with real detail, e.g. `Lead_Hindustan_Pencils.md` |
 | `.claude/agents/` | Research agents `icp-analyst` and `competitors-analyst` |
 | `Code/` | Product code (placeholder; the PoC is in `gawtamcr/cursor-hack`) |
 

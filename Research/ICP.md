@@ -22,6 +22,7 @@ Figures from sources are linked. Anything marked **(est.)** is an estimate.
 | P3 | Deployed robot fleets: field triage and maintenance | Fleet ops / support | TODO | TODO | TODO | TODO | TODO |
 | P4 | Industrial robot OEMs and factory integrators (e.g. ABB, Kickmaker) | Engineering / quality | TODO | TODO | TODO | TODO | TODO |
 | P5 | Medical robotics and medtech (regulated requirements, PLM) | Quality / regulatory | TODO | TODO | TODO | TODO | TODO |
+| P6 | Labour-heavy Indian manufacturers (first lead: Hindustan Pencils, Pollachi) | Plant head / owner | Reported: QC, material movement, 30% monthly attrition | TODO; low margins | TODO | TODO | Not an ICP for the current pitch; see `Lead_Hindustan_Pencils.md` |
 
 ---
 
@@ -95,10 +96,11 @@ Drafted after the hackathon for an automotive HIL test engineer; reuse it for an
 
 ### Leads
 
-See `SUMMARY.md` section 5. Describe leads by role here; don't add names.
+See `SUMMARY.md` section 5. Each lead with real detail gets its own `Research/Lead_*.md` file.
 
 ---
 
 ## Change log
 
 - 27 Oct 2026: created from the hackathon PDF; segments seeded, no research yet.
+- 27 Oct 2026: added P6 (labour-heavy Indian manufacturers) from the Hindustan Pencils lead.

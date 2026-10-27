@@ -7,6 +7,7 @@
 - **Team:** solo founder (Gawtam). The hackathon team isn't working on it now.
 - **Founder situation:** based in Stockholm; part-time, still exploring. localE is a separate, parallel project.
 - **Stage:** PoC built at the hackathon ([gawtamcr/cursor-hack](https://github.com/gawtamcr/cursor-hack)). No customer interviews yet.
+- **New lead (Oct 2026):** Hindustan Pencils' Pollachi plant, through Tejas, a friend in India. They report three problems: material movement, worker attrition and QC. See `Research/Lead_Hindustan_Pencils.md`.
 - **Open decision:** the ICP. Research is in `Research/ICP.md`. The PDF's own framing is pre-deployment testing (HIL/CI) vs deployed-fleet triage.
 - **Next step:** talk to test engineers before building more. The interview guide is in `Research/ICP.md`.
 
@@ -93,10 +94,11 @@ Validated end-to-end on a **self-driving car's steering subsystem**, chosen beca
 
 ## 5. Customer-discovery leads
 
-Status of all leads: not contacted since the team stopped (est.).
+Status of the hackathon leads: not contacted since the team stopped (est.).
 
 | Lead | Why it matters |
 |---|---|
+| Hindustan Pencils (Nataraj, Apsara), Pollachi plant, via Tejas (Oct 2026) | A labour-heavy manufacturer with three named problems. Details are in `Research/Lead_Hindustan_Pencils.md` |
 | Junior HIL (hardware-in-the-loop) test engineer at Porsche | The closest match to the PoC. An interview guide was drafted (see `Research/ICP.md`) |
 | PLM expert (sensors, biotech), via a biotech lab director | Tests whether the PLM side is the real entry point |
 | A biomedical director | Raised the same bottleneck: who has access to low-level sensors and to PLM systems |
