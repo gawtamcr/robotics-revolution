@@ -9,7 +9,8 @@ Figures from sources are linked. Anything marked **(est.)** is an estimate.
 ## TL;DR
 
 - TODO: the best beachhead segment, who pays, and why.
-- The open framing from the hackathon: **pre-deployment testing (HIL/SIL, CI)** vs **deployed-fleet triage**. These are different products with different buyers.
+- **Two candidate markets:** A, robot and vehicle testing (P1–P5, from the hackathon), and B, legacy factories in India (P6). Which comes first is the open decision.
+- Within A, the hackathon's own split: **pre-deployment testing (HIL/SIL, CI)** vs **deployed-fleet triage**. These are different products with different buyers.
 
 ---
 
@@ -22,7 +23,7 @@ Figures from sources are linked. Anything marked **(est.)** is an estimate.
 | P3 | Deployed robot fleets: field triage and maintenance | Fleet ops / support | TODO | TODO | TODO | TODO | TODO |
 | P4 | Industrial robot OEMs and factory integrators (e.g. ABB, Kickmaker) | Engineering / quality | TODO | TODO | TODO | TODO | TODO |
 | P5 | Medical robotics and medtech (regulated requirements, PLM) | Quality / regulatory | TODO | TODO | TODO | TODO | TODO |
-| P6 | Labour-heavy Indian manufacturers (first lead: Hindustan Pencils, Pollachi) | Plant head / owner | Reported: QC, material movement, 30% monthly attrition | TODO; low margins | TODO | TODO | Not an ICP for the current pitch; see `Lead_Hindustan_Pencils.md` |
+| P6 | Brownfield Indian factories with legacy machines (first lead: Hindustan Pencils, Pollachi) | Plant head / owner | Breakdowns on ~20-year-old machines; fault know-how held by staff in their 50s; QC; material monitoring | Unproven; low margins | ~30,000 factories with 100+ workers in India (est.) | Low software maturity (SAP only); needs sensor retrofit | Promising new segment; see `Opportunity_Legacy_Factories_India.md` |
 
 ---
 
@@ -104,3 +105,5 @@ See `SUMMARY.md` section 5. Each lead with real detail gets its own `Research/Le
 
 - 27 Oct 2026: created from the hackathon PDF; segments seeded, no research yet.
 - 27 Oct 2026: added P6 (labour-heavy Indian manufacturers) from the Hindustan Pencils lead.
+- 27 Oct 2026: reframed P6 as brownfield factories with legacy machines, after desk research and the follow-up with Tejas.
+- 27 Oct 2026: TL;DR reframed as two candidate markets (A: P1–P5; B: P6).

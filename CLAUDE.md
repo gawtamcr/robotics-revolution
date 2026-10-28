@@ -4,12 +4,25 @@ Startup project of Gawtam C R, a solo founder. This folder holds the hackathon m
 
 ## What it is
 
-- **Cited root-cause diagnosis for robots under test.** It connects a company's product requirements to its live machines. When a test fails, it maps the live symptom to the requirement it violates, the root cause, the fix and the known-issue tag, and cites each one.
-- **How it works:**
-  - Requirements and known issues are held as durable agent memory.
-  - An MCP server exposes the live system (ROS 2) to an LLM agent as tools: read health, read stats, inject fault, restart unit.
-  - A deterministic, unit-tested classifier turns telemetry into a *symptom* with a health status, never a root cause. The agent does the mapping from symptom to cause.
-- **Citation is the product, not a feature.** In safety-critical hardware, engineers won't act on an uncited diagnosis and auditors won't accept it.
+One idea, two candidate first markets.
+
+- **The idea: cited diagnosis from captured knowledge.** When a machine misbehaves, the gap between the symptom and its root cause is a *knowledge* problem, not a sensing problem. The knowledge exists, in requirement documents or in experienced people's heads, but nobody can reach it at the moment of failure. The product holds that knowledge as memory, reads the machine, and maps a symptom to the likely cause and fix, citing every source.
+- **The shared engine:**
+  - Known issues (and requirements, where they exist) held as durable agent memory.
+  - Live access to the machine: an MCP server over its middleware (ROS 2 in the PoC), or retrofit sensors and operator reports.
+  - A deterministic classifier that turns signals into a *symptom* with a health status, never a root cause. The agent maps the symptom to a cause.
+- **Citation is the product, not a feature.** Engineers, operators and auditors won't act on an uncited diagnosis.
+
+### The two directions
+
+| | A. Robot and vehicle testing (hackathon) | B. Legacy factories (India) |
+|---|---|---|
+| Where the knowledge lives | Requirement documents (PLM, Jira, specs) | Senior technicians' heads; little is documented |
+| How it reads the machine | Middleware (ROS 2), HIL rigs, test telemetry | Operator reports first, then retrofit sensors |
+| What it cites | Requirement ID and known-issue tag, for engineers and auditors | Past cases and who fixed them, for operators |
+| Buyer | Test and validation teams at OEMs and robotics companies | Plant heads at brownfield, low-margin factories |
+| Evidence so far | PoC; no interviews | One warm lead (Hindustan Pencils); desk research |
+| Main files | `SUMMARY.md` sections 1–7; `Research/ICP.md` P1–P5 | `Research/Opportunity_Legacy_Factories_India.md`; `Research/Lead_Hindustan_Pencils.md`; `Research/ICP.md` P6 |
 
 ## Current status
 
@@ -18,23 +31,28 @@ Startup project of Gawtam C R, a solo founder. This folder holds the hackathon m
 - **Founder:** based in Stockholm, part-time and still exploring. localE is a separate project in its own repo.
 - **PoC:** built in about 12 hours at the hackathon, on a self-driving car's steering subsystem. Code is in [gawtamcr/cursor-hack](https://github.com/gawtamcr/cursor-hack); `Code/` here is a placeholder.
 - **Validation:** none yet. No customer interviews done; leads are listed in `SUMMARY.md`.
-- **Open questions:** see `SUMMARY.md`. The biggest one: would a team just prompt an LLM with its requirement doc and logs and get 70% of this for free?
+- **Open decision:** which market first, A or B. Decide on what customers say and pay, not on desk research.
+- **Open questions:** see `SUMMARY.md`. For A, the biggest one: would a team just prompt an LLM with its requirement doc and logs and get 70% of this for free? For B: will low-margin plants pay, and can technicians' knowledge be captured reliably?
 
 ## Files
 
 | Path | Contents |
 |---|---|
-| `SUMMARY.md` | Summary of the hackathon material, plus current status |
+| `SUMMARY.md` | Current status of both directions, plus a summary of the hackathon material |
 | `Pitch/CRG Hack Idea.pdf` | Original hackathon notes: team meetings, pitch, PoC, open questions, interview guide, leads, competitors. Background only; don't edit |
 | `Research/ICP.md` | ICP research: candidate segments, scorecard, recommendation, validation plan |
 | `Research/Competitors.md` | Competitor analysis: master table, threat ratings, feature-overlap matrix, gaps |
 | `Research/Lead_*.md` | One file per customer lead with real detail, e.g. `Lead_Hindustan_Pencils.md` |
+| `Research/Opportunity_*.md` | Problem, market and value-proposition analysis for a candidate segment, e.g. `Opportunity_Legacy_Factories_India.md` |
+| `Research/Academic_*.md` | Technical state of the art from research groups, e.g. `Academic_EPFL_IMOS.md` |
+| `Research/hppl_poc.md` | Internal pilot plan for Hindustan Pencils' Pollachi plant: immediate ROI, value model, 8-week pilot, scalability |
+| `Research/hppl_open_questions.md` | Every open question on the HPPL pilot, with an estimate, who can answer, and priority. `hppl_poc.md` cites its IDs |
 | `.claude/agents/` | Research agents `icp-analyst` and `competitors-analyst` |
 | `Code/` | Product code (placeholder; the PoC is in `gawtamcr/cursor-hack`) |
 
 ## Research agents
 
-- **`icp-analyst`** owns `Research/ICP.md`: who has this pain, who pays, and how to reach them.
+- **`icp-analyst`** owns `Research/ICP.md`, `Research/Opportunity_*.md` and `Research/Lead_*.md`: who has this pain, who pays, and how to reach them, in both directions.
 - **`competitors-analyst`** owns `Research/Competitors.md`. It rates each competitor High, Medium or Low against the current ICP and tags which features it overlaps:
 
   | Code | Feature |
@@ -72,11 +90,19 @@ Startup project of Gawtam C R, a solo founder. This folder holds the hackathon m
 - **Privacy:** never write personal data about private individuals into the markdown files. Describe leads by role and company type.
 - **Naming:** refer to the founder as Gawtam or "the founder".
 
-## Product constraints (from the hackathon)
+## Product constraints
 
+**Both directions**
 - **The agent must reason from the signal.** In the PoC the fault injector is named like a production ECU, so the agent can't shortcut the diagnosis by reading node names. Keep that constraint in demos and tests.
-- **Symptom ≠ root cause.** The classifier emits symptoms only; the diagnosis step cites the requirement and known issue.
+- **Symptom ≠ root cause.** The classifier emits symptoms only; the diagnosis step cites the requirement, known issue or past case.
+
+**A. Robot and vehicle testing**
 - **On-prem or self-hosted is probably mandatory** because of IP sensitivity. Design for it.
+
+**B. Legacy factories**
+- **Assume no plant IT.** SAP may be the only software, and old machines often expose no data. Cellular sensors (as Tractian uses) avoid plant networks.
+- **Voice-first, in the operators' language:** Tamil at the first lead.
+- **Priced for low-margin plants:** about ₹500–1,000 per machine per month (est.), roughly 4–8x below Western tools.
 
 ## Key dates
 

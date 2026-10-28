@@ -1,9 +1,12 @@
 # robotics-revolution
 
-Connect a company's product requirements to their live robots, so that when a test fails, the system returns a cited root-cause diagnosis instead of a raw error.
+Cited diagnosis from captured knowledge: when a machine misbehaves, map the symptom to its likely root cause and fix, citing the requirement or past case behind each answer.
 
-The idea came out of the Cursor hackathon at RAISE Summit (July 2026). The hackathon proof of concept lives in [gawtamcr/cursor-hack](https://github.com/gawtamcr/cursor-hack).
+Two candidate first markets:
+- **Robot and vehicle testing:** connect a company's requirements to its live robots, so a failed test returns a cited diagnosis instead of a raw error. This came out of the Cursor hackathon at RAISE Summit (July 2026); the proof of concept lives in [gawtamcr/cursor-hack](https://github.com/gawtamcr/cursor-hack).
+- **Legacy factories in India:** capture senior technicians' fault-and-fix knowledge on decades-old machines, and warn before the machines fail.
 
-- `SUMMARY.md`: the idea, the PoC, open questions and current status
+Where to read more:
+- `SUMMARY.md`: current status of both directions, and the hackathon material
 - `CLAUDE.md`: project context and conventions
-- `Research/`: ICP and competitor research
+- `Research/`: ICP, competitor, opportunity and academic research
