@@ -10,3 +10,4 @@ Where to read more:
 - `SUMMARY.md`: current status of both directions, and the hackathon material
 - `CLAUDE.md`: project context and conventions
 - `Research/`: ICP, competitor, opportunity and academic research
+- `Research/Factory_Brain.md`: the factory brain exploration, one level above both markets

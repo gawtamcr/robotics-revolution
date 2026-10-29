@@ -24,11 +24,21 @@ One idea, two candidate first markets.
 | Evidence so far | PoC; no interviews | One warm lead (Hindustan Pencils); desk research |
 | Main files | `SUMMARY.md` sections 1–7; `Research/ICP.md` P1–P5 | `Research/Opportunity_Legacy_Factories_India.md`; `Research/Lead_Hindustan_Pencils.md`; `Research/ICP.md` P6 |
 
+### Exploration: factory brain (since 28 Oct 2026)
+
+One level above A and B. A plant-level reasoning layer over multi-vendor robot fleets (arms, humanoids, AMRs), machines and people:
+- It understands what a change means.
+- It re-plans the work across vendors without reprogramming (e.g. switching a paint cell from car doors to hoods).
+- It checks its own plans and cites why.
+
+Cited diagnosis is one candidate wedge among seven. Brainstorm and wedge scorecard: `Research/Factory_Brain.md`.
+
 ## Current status
 
 - **Source of truth:** the "Current status" section of `SUMMARY.md`. Update it whenever a decision changes.
 - **Team:** solo (Gawtam). The idea came from a 4-person team at the Cursor hackathon, RAISE Summit, July 2026. The rest of the team isn't working on it now.
-- **Founder:** based in Stockholm, part-time and still exploring. localE is a separate project in its own repo.
+- **Founder:** based in Stockholm, part-time and still exploring. Physical AI depth: robot learning and VLAs, control and RL, world models and simulation, perception. localE is a separate project in its own repo.
+- **Focus (28 Oct 2026):** direction B's factory-specific work (the HPPL pilot) is parked while Gawtam brainstorms the factory brain.
 - **PoC:** built in about 12 hours at the hackathon, on a self-driving car's steering subsystem. Code is in [gawtamcr/cursor-hack](https://github.com/gawtamcr/cursor-hack); `Code/` here is a placeholder.
 - **Validation:** none yet. No customer interviews done; leads are listed in `SUMMARY.md`.
 - **Open decision:** which market first, A or B. Decide on what customers say and pay, not on desk research.
@@ -47,7 +57,9 @@ One idea, two candidate first markets.
 | `Research/Academic_*.md` | Technical state of the art from research groups, e.g. `Academic_EPFL_IMOS.md` |
 | `Research/hppl_poc.md` | Internal pilot plan for Hindustan Pencils' Pollachi plant: immediate ROI, value model, 8-week pilot, scalability |
 | `Research/hppl_open_questions.md` | Every open question on the HPPL pilot, with an estimate, who can answer, and priority. `hppl_poc.md` cites its IDs |
-| `.claude/agents/` | Research agents `icp-analyst` and `competitors-analyst` |
+| `Research/Factory_Brain.md` | Factory brain brainstorm: vision, layer map, physical AI state of the art, critical analysis, candidate wedges and scorecard, company paths, experiments |
+| `Research/Interviews_Factory_Brain.md` | Interview guide for the factory brain's experiment E1 (how a change on a robot line goes), with an anonymised interview log |
+| `.claude/agents/` | Research agents `icp-analyst`, `competitors-analyst` and `factory-brain-strategist` |
 | `Code/` | Product code (placeholder; the PoC is in `gawtamcr/cursor-hack`) |
 
 ## Research agents
@@ -66,6 +78,7 @@ One idea, two candidate first markets.
   | H | HIL/SIL test execution |
   | V | telemetry visualisation |
 
+- **`factory-brain-strategist`** owns `Research/Factory_Brain.md`. It brainstorms and stress-tests the factory brain, and scores its candidate wedges on the same 7 criteria. It researches on the web only when asked.
 - **What they read first:** `SUMMARY.md` and the reports.
 - **What they edit:** only their own report, logging each change in its change log. Findings that affect the other report go in the reply.
 

@@ -12,8 +12,14 @@
   - The plant has 200+ machines that are ~20 years old, and its fault know-how sits with staff in their 50s.
   - It also reports QC, attrition and material-monitoring problems.
   - Desk research points to a machine-health assistant that captures technicians' knowledge.
-  - Next: get answers to the "ask first" list in `Research/hppl_open_questions.md`, then run the 8-week pilot in `Research/hppl_poc.md`. Tejas is on-site; Gawtam works remotely. Week 2 delivers a costed list of the plant's worst machines.
+  - **Parked (28 Oct 2026)** while Gawtam brainstorms the factory brain (below). Next step when it resumes: get answers to the "ask first" list in `Research/hppl_open_questions.md`, then run the 8-week pilot in `Research/hppl_poc.md`. Tejas is on-site; Gawtam works remotely. Week 2 delivers a costed list of the plant's worst machines.
   - Analysis: `Research/Opportunity_Legacy_Factories_India.md`.
+- **Factory brain (exploration, since 28 Oct 2026):**
+  - What it is: a generic, plant-level reasoning layer over multi-vendor robot fleets. It understands what a change means, re-plans without reprogramming, verifies its own plans and cites why.
+  - Why: it plays to Gawtam's physical AI depth.
+  - Cited diagnosis is one of seven candidate wedges. First-pass scores (est.) favour a verifier for robot programs and learned policies, intent-to-program, and change-impact analysis.
+  - Status: brainstorm only; no research or interviews yet.
+  - Doc: `Research/Factory_Brain.md`, owned by the `factory-brain-strategist` agent.
 - **Open decision:** which market first. Decide on what customers say and pay, not on desk research. Within A, the PDF's own sub-question remains: pre-deployment testing (HIL/CI) or deployed-fleet triage.
 
 Sections 1–7 below summarise the hackathon PDF (direction A).
